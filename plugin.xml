@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com-jernung-plugins-chartboost"
+        version="0.1.0">
+
+  <name>Chartboost Plugin</name>
+  <description>A cordova plugin for Chartboost.</description>
+  <author>Jernung, LLC</author>
+  <license>MIT</license>
+  <keywords>cordova,chartboost</keywords>
+
+  <engines>
+    <engine name="cordova" version=">=6.0.0" />
+  </engines>
+
+  <js-module src="www/chartboost.js" name="ChartboostPlugin">
+    <clobbers target="plugins.chartboost" />
+  </js-module>
+
+  <platform name="android">
+
+    <dependency id="com-jernung-plugin-promise" url="https://github.com/mcfarljw/cordova-plugin-promise" />
+
+    <config-file target="config.xml" parent="/*">
+      <feature name="ChartboostPlugin" >
+        <param name="android-package" value="com.jernung.plugins.chartboost.ChartboostPlugin" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/ChartboostPlugin.java" target-dir="src/com/jernung/plugins/chartboost" />
+
+  </platform>
+
+</plugin>
