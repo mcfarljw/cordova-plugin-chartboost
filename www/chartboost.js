@@ -1,10 +1,24 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-  load: function () {
+  cacheInterstitial: function () {
     return new Promise(
       function (resolve, reject) {
-        exec(resolve, reject, 'ChartboostPlugin', 'load', []);
+        exec(resolve, reject, 'ChartboostPlugin', 'cacheInterstitial', []);
+      }
+    );
+  },
+  showInterstitial: function () {
+    return new Promise(
+      function (resolve, reject) {
+        exec(resolve, reject, 'ChartboostPlugin', 'showInterstitial', []);
+      }
+    );
+  },
+  startWithAppId: function () {
+    return new Promise(
+      function (resolve, reject) {
+        exec(resolve, reject, 'ChartboostPlugin', 'startWithAppId', [appId, appSignature]);
       }
     );
   }
