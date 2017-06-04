@@ -15,7 +15,7 @@ module.exports = {
       }
     );
   },
-  startWithAppId: function () {
+  startWithAppId: function (appId, appSignature) {
     return new Promise(
       function (resolve, reject) {
         exec(resolve, reject, 'ChartboostPlugin', 'startWithAppId', [appId, appSignature]);
