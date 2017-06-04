@@ -28,7 +28,24 @@
       </feature>
     </config-file>
 
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity android:name="com.chartboost.sdk.CBImpressionActivity"
+                android:excludeFromRecents="true"
+                android:hardwareAccelerated="true"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+                android:configChanges="keyboardHidden|orientation|screenSize" />
+    </config-file>
+
+    <framework src="com.google.android.gms:play-services-ads:10.2.6" />
+
     <source-file src="src/android/ChartboostPlugin.java" target-dir="src/com/jernung/plugins/chartboost" />
+
+    <source-file src="src/android/chartboost-6.6.3.jar" target-dir="libs" />
 
   </platform>
 
