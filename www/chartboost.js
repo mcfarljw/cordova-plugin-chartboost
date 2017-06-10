@@ -8,10 +8,24 @@ module.exports = {
       }
     );
   },
+  cacheRewardedVideo: function () {
+    return new Promise(
+      function (resolve, reject) {
+        exec(resolve, reject, 'ChartboostPlugin', 'cacheRewardedVideo', []);
+      }
+    );
+  },
   showInterstitial: function () {
     return new Promise(
       function (resolve, reject) {
         exec(resolve, reject, 'ChartboostPlugin', 'showInterstitial', []);
+      }
+    );
+  },
+  showRewardedVideo: function () {
+    return new Promise(
+      function (resolve, reject) {
+        exec(resolve, reject, 'ChartboostPlugin', 'showRewardedVideo', []);
       }
     );
   },
