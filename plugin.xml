@@ -41,8 +41,6 @@
                 android:configChanges="keyboardHidden|orientation|screenSize" />
     </config-file>
 
-    <framework src="com.google.android.gms:play-services-ads:10.2.6" />
-
     <source-file src="src/android/ChartboostPlugin.java" target-dir="src/com/jernung/plugins/chartboost" />
 
     <source-file src="src/android/chartboost-6.6.3.jar" target-dir="libs" />
